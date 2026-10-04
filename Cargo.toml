@@ -1,6 +1,6 @@
 [package]
 name = "timestamp-id"
-version = "0.0.1"
+version = "0.1.0"
 edition = "2024"
 description = "Generate IDs based on current timestamp"
 repository = "https://github.com/Dmytro-Svitkin/timestamp-id"

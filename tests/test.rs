@@ -2,8 +2,11 @@ use timestamp_id::*;
 
 #[test]
 fn test_timestamp(){
-    let a:Timestamp=Timestamp::new_system_timestamp();
-    println!("{}\n{}",a.to_string(),a.as_u128())
+    let current_timestamp:Timestamp=Timestamp::new_system_timestamp();
+    let timestamp_since_2026:Timestamp=Timestamp::new_system_timestamp_since_2026();
+
+    println!("{}\n{}",current_timestamp.to_string(),current_timestamp.as_u128());
+    println!("{}",timestamp_since_2026.as_u128())
 }
 
 #[test]
@@ -12,5 +15,5 @@ fn test_timestamp_id(){
     let raw_current_timestamp_id:TimestampId=TimestampId::new_raw_system_timestamp_id().alphanumeric();
 
     println!("{}",current_timestamp_id.as_str());
-    println!("{}",raw_current_timestamp_id.as_str())
+    println!("{}",raw_current_timestamp_id.as_str())    
 }
