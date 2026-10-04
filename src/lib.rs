@@ -127,6 +127,34 @@ impl<'a>TimestampId<'a>{
         TimestampId::raw_from_timestamp(Timestamp::new_system_timestamp())
     }
 
+        /// New timestamp-id given by system since the given offset-timestamp.
+    /// 
+    /// Returns a new timestamp-id based on the timestamp given by system since the given offset-timestamp in microseconds and a the random padding.
+    pub fn new_system_timestamp_id_since(offset:Timestamp)->Self{
+        TimestampId::from_timestamp(Timestamp::new_system_timestamp_since(offset))
+    }
+
+    /// New raw timestamp-id given by system since the given offset-timestamp.
+    /// 
+    /// Returns a new raw (i.e., without the random padding) based on the timestamp given by system since the given offset-timestamp in microseconds.
+    pub fn new_raw_system_timestamp_id_since(offset:Timestamp)->Self{
+        TimestampId::raw_from_timestamp(Timestamp::new_system_timestamp_since(offset))
+    }
+
+    /// New timestamp-id given by system since `2026-01-01 00:00.00`.
+    /// 
+    /// Returns a new timestamp-id based on the timestamp given by system since `2026-01-01 00:00.00` and a the random padding.
+    pub fn new_system_timestamp_id_since_2026()->Self{
+        TimestampId::from_timestamp(Timestamp::new_system_timestamp_since_2026())
+    }
+
+    /// New raw timestamp-id given by system since `2026-01-01 00:00.00`.
+    /// 
+    /// Returns a new raw (i.e., without the random padding) based on the timestamp given by system since `2026-01-01 00:00.00`.
+    pub fn new_raw_system_timestamp_id_since_2026()->Self{
+        TimestampId::raw_from_timestamp(Timestamp::new_system_timestamp_since_2026())
+    }
+
     /// Timestamp-id as `u128`.
     /// 
     /// Returns an `u128` value based on the timestamp-id.
