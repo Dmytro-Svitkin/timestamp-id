@@ -85,7 +85,7 @@ impl<'a>TimestampId<'a>{
     }
 
     pub fn as_str(&self)->&str{
-        unsafe{self.timestamp_id.value_as_str_unchecked()}
+        self.timestamp_id.value_as_str()
     }
 
     pub fn to_string(&self)->String{
