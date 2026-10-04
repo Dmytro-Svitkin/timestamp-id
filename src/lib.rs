@@ -127,7 +127,7 @@ impl<'a>TimestampId<'a>{
         TimestampId::raw_from_timestamp(Timestamp::new_system_timestamp())
     }
 
-        /// New timestamp-id given by system since the given offset-timestamp.
+    /// New timestamp-id given by system since the given offset-timestamp.
     /// 
     /// Returns a new timestamp-id based on the timestamp given by system since the given offset-timestamp in microseconds and a the random padding.
     pub fn new_system_timestamp_id_since(offset:Timestamp)->Self{

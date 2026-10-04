@@ -2,7 +2,7 @@
 name = "timestamp-id"
 version = "0.1.0"
 edition = "2024"
-description = "Generate IDs based on current timestamp"
+description = "Fast, collision-resistant timestamp-based IDs."
 repository = "https://github.com/Dmytro-Svitkin/timestamp-id"
 license = "BSD-3-Clause"
 
