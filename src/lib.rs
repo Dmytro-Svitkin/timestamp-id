@@ -11,7 +11,7 @@ pub struct Timestamp{
 
 /// Timestamp-id - timestamp in microseconds with random padding.
 pub struct TimestampId<'a>{
-    pub(crate)timestamp_id:Numeral<'a>
+    pub(crate)timestamp_id:Numeral<'a,39>
 }
 
 impl Timestamp{
@@ -88,7 +88,7 @@ impl<'a>TimestampId<'a>{
     /// Returns a timestamp-id based on the given timestamp.
     pub fn from_timestamp(timestamp:Timestamp)->Self{
         let timestamp_id:u128=timestamp.timestamp_mcs*RANDOM_PADDING+rand::random_range(0..RANDOM_PADDING);// Concat of timestamp and random.
-        Self{timestamp_id:Numeral::new_dec_from_u128(timestamp_id)}
+        Self{timestamp_id:Numeral::<39>::new_dec_from_u128(timestamp_id)}
     }
 
     /// Raw timestamp-id from timestamp.
@@ -96,7 +96,7 @@ impl<'a>TimestampId<'a>{
     /// Returns a raw (i.e., without the random padding) timestamp-id based on the given timestamp.
     pub const fn raw_from_timestamp(timestamp:Timestamp)->Self{
         let timestamp_id:u128=timestamp.timestamp_mcs;
-        Self{timestamp_id:Numeral::new_dec_from_u128(timestamp_id)}
+        Self{timestamp_id:Numeral::<39>::new_dec_from_u128(timestamp_id)}
     }
 
     /// Timestamp-id from time.

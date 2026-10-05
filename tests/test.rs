@@ -17,5 +17,9 @@ fn test_timestamp_id(){
 
     println!("{}",current_timestamp_id.as_str());
     println!("{}",raw_current_timestamp_id.as_str());
-    println!("{}",short.as_str())
+    println!("{}\n",short.as_str());
+
+    for _ in 0..=1000{
+        println!("{}",TimestampId::new_system_timestamp_id_since_2026().alphanumeric().as_str())
+    }
 }

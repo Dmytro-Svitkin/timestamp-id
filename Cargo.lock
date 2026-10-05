@@ -71,7 +71,7 @@ checksum = "63b8176103e19a2643978565ca18b50549f6101881c443590420e4dc998a3c69"
 
 [[package]]
 name = "timestamp-id"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "rand",
  "u8-base-converter",
@@ -79,6 +79,6 @@ dependencies = [
 
 [[package]]
 name = "u8-base-converter"
-version = "0.1.1"
+version = "0.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "46f30eeb1ccf82fca2b943edd3a7abce313cb6ae25081b2155d5459710fa7404"
+checksum = "d919d9c56610873c6590a3953e5f9ead6ed6f8d3128ad825c6a8ff3859734875"

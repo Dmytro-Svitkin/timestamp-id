@@ -1,6 +1,6 @@
 [package]
 name = "timestamp-id"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 description = "Fast, collision-resistant timestamp-based IDs."
 repository = "https://github.com/Dmytro-Svitkin/timestamp-id"
@@ -8,4 +8,4 @@ license = "BSD-3-Clause"
 
 [dependencies]
 rand = "0.10.3"
-u8-base-converter = "0.1.1"
+u8-base-converter = "0.1.2"
