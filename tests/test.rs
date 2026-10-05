@@ -13,7 +13,7 @@ fn test_timestamp(){
 fn test_timestamp_id(){
     let current_timestamp_id:TimestampId=TimestampId::new_system_timestamp_id().alphanumeric();
     let raw_current_timestamp_id:TimestampId=TimestampId::new_raw_system_timestamp_id().alphanumeric();
-    let short:TimestampId=TimestampId::new_system_timestamp_id_since_2026().alphanumeric();
+    let short:TimestampId=TimestampId::new_raw_system_timestamp_id_since_2026().alphanumeric();
 
     println!("{}",current_timestamp_id.as_str());
     println!("{}",raw_current_timestamp_id.as_str());
