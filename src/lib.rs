@@ -165,7 +165,7 @@ impl<'a>TimestampId<'a>{
     /// Timestamp-id as string slice (`&str`).
     ///
     /// Returns a string slice (`&str`) based on timestamp-id.
-    pub fn as_str(&self)->&str{
+    pub const fn as_str(&self)->&str{
         self.timestamp_id.value_as_str()
     }
 
@@ -179,7 +179,14 @@ impl<'a>TimestampId<'a>{
     /// Timestamp-id to alphanumeric timestamp-id.
     /// 
     /// Returns a converted to alphanumeric (i.e., base62) timestamp-id based on timestamp-id numeral.
-    pub fn alphanumeric(&self)->Self{
+    pub const fn alphanumeric(&self)->Self{
         Self{timestamp_id:self.timestamp_id.converted_to(ALPHANUMERIC)}
+    }
+
+    /// Timestamp-id to numeric timestamp-id.
+    /// 
+    /// Returns a converted to numeric (i.e., decimal) timestamp-id based on timestamp-id numeral.
+    pub const fn numeric(&self)->Self{
+        Self{timestamp_id:self.timestamp_id.converted_to(DECIMAL)}
     }
 }
